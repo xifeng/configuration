@@ -435,12 +435,7 @@ func (p *HoconValue) quoteIfNeeded(text string) string {
 		return "\"\""
 	}
 
-	if strings.IndexByte(text, ' ') >= 0 ||
-		strings.IndexByte(text, '\t') >= 0 {
-		return "\"" + text + "\""
-	}
-
-	return text
+	return "\"" + text + "\""
 }
 
 func findStringSubmatchMap(s, exp string) (map[string]string, bool) {
